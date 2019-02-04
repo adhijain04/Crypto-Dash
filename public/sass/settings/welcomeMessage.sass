@@ -1,0 +1,57 @@
+.WelcomeMessage-container
+	+welcom-message-container
+	.welcome-message
+		width: 100%
+		+column-display
+		text-align: center
+		font-weight: normal
+		align-items: center
+	.instruction-message-container
+		width: 100%
+		+column-display
+		align-items: center
+		.instruction-image
+			width: 80px
+			margin: 20px 0px
+		.instruction-message
+			width: 100%
+			text-align: center
+			font-size: 20px
+			letter-spacing: 10
+	.favorite-coins-container
+		width: 100%
+		+column-display
+		align-self: flex-start
+		.favorite-coins-heading
+			margin: 0px 0px 10px 0px
+		.coin-grid
+			+coin-container
+			max-height: 270px
+			overflow-y: scroll
+			padding: 5px 0px 0px 1px
+			&::-webkit-scrollbar
+				width: 5px
+			&::-webkit-scrollbar-thumb
+				border-radius: 4px
+				background-color: $primary-font-color
+			&::-webkit-scrollbar-track
+				background-color: $bg-color
+			.coin-div
+				+coin-div
+				+row-display
+				width: 207px
+				margin-right: 10px
+				position: relative
+				justify-content: space-between
+				.coin-info
+					+column-display
+					.coin-name,.coin-symbol
+						margin: 0px
+				.coin-image
+					height: 35px
+					border-radius: 50px
+				#removeFavCoin
+					top: 0
+					right: 0
+					position: absolute
+					font-size: 10px !important

@@ -1,0 +1,107 @@
+$bg-color : #010e2c
+$primary-font-color : #fff
+$font-family: 'Do Hyeon', sans-serif
+
+=column-display
+	display: flex
+	flex-direction: column
+=row-display
+	display: flex
+	align-items: center
+=ghost-button
+	color: $primary-font-color
+	font-size: 16px
+	cursor: pointer
+	margin-left: 20px
+	padding: 5px 10px
+	border-radius: 4px
+	letter-spacing: 2px
+	font-family: $font-family
+	border: solid 1px $primary-font-color
+	background-color: transparent
+	&:hover
+		color: $bg-color
+		background-color: $primary-font-color
+=button
+	font-size: 16px
+	cursor: pointer
+	color: $bg-color
+	margin-left: 20px
+	padding: 5px 10px
+	border-radius: 4px
+	letter-spacing: 2px
+	font-family: $font-family
+	border: solid 1px $primary-font-color
+	background-color: $primary-font-color
+	&:focus
+		outline-color: transparent
+=coin-div
+	width: 212px
+	padding: 10px
+	border-radius: 4px
+	margin-bottom: 10px
+	background-color: #061a44
+	box-shadow: 0px 0px 5px 1px #121d5b
+	&:hover
+		cursor: pointer
+		box-shadow: 0px 0px 5px 1px $primary-font-color
+=coin-container
+	display: flex
+	flex-wrap: wrap
+=search-input
+	padding: 8px 10px
+	border-radius: 4px
+	background: $primary-font-color
+	color: #061a44
+	border: solid 1px $primary-font-color
+	&:focus
+		outline-color: transparent
+=welcom-message-container
+	display: flex
+	flex-wrap: wrap
+	margin: 40px 0px
+	max-height: 300px
+	border-radius: 4px
+	align-items: center
+	overflow-y: hidden
+	padding: 10px 0px 10px 10px
+	border: solid 1px $primary-font-color
+=loader-container
+	width: 100%
+	+row-display
+	justify-content: center
+=loader
+	width: 70px
+=currentFavoriteCoin
+	box-shadow: 0px 0px 5px 1px $primary-font-color !important
+
+
+body
+	background-color: $bg-color
+	color: $primary-font-color
+	font-family: $font-family
+	letter-spacing: 2px
+	&::-webkit-scrollbar
+		width: 5px
+	&::-webkit-scrollbar-thumb
+		border-radius: 4px
+		background-color: $primary-font-color
+	&::-webkit-scrollbar-track
+		background-color: $bg-color
+.App
+	padding: 20px 40px
+.Toastify__toast--success
+	background: $bg-color !important
+	box-shadow: 0px 0px 3px 1px $primary-font-color !important
+.Toastify__toast
+	min-height: 40px !important
+	border-radius: 4px !important
+.Toastify__toast-container--bottom-center
+	left: 0 !important
+	right: 0 !important
+	bottom: 0 !important
+	margin: 0px auto !important
+.Toastify__toast-container
+	width: 415px !important
+
+

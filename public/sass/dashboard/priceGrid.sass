@@ -1,0 +1,75 @@
+.priceGrid-container
+	margin-top: 30px
+	border-radius: 4px
+	border: solid 1px #ffff
+	padding: 10px 10px 0px 10px
+	.coin-price-heading
+		margin: 0px 0px 10px 0px
+	>.coin-price-grid-container
+		overflow-x: scroll
+		&::-webkit-scrollbar
+			height: 5px
+		&::-webkit-scrollbar-thumb
+			border-radius: 4px
+			background-color: $primary-font-color
+		&::-webkit-scrollbar-track
+			background-color: $bg-color
+		.coin-price-grid
+			height: 85px
+			+coin-container
+			flex-wrap: nowrap
+			overflow-x: hidden
+			min-width: min-content
+			padding: 10px 0px 0px 5px
+			justify-content: flex-start
+			.coin-price-div
+				+coin-div
+				width: 210px
+				+column-display
+				margin-right: 10px
+				padding: 10px 10px 0px 10px
+				justify-content: space-between
+				&.currentFavoriteCoin
+					+currentFavoriteCoin
+				.coin-price-info
+					width: 100%
+					+row-display
+					justify-content: space-between
+					.coin-price-details
+						+row-display
+						.coin-price-image
+							height: 25px
+							border-radius: 50px
+						.coin-price-symbol
+							margin: 0px 0px 0px 10px
+					.coin-price-change-rate-positive
+						margin: 0px
+						color: green
+					.coin-price-change-rate-negative
+						margin: 0px
+						color: red
+				.coin-price
+					margin: 0px
+					font-size: 30px
+	.loader-container
+		+loader-container
+		.loader
+			+loader
+
+.priceGrid-container-error
+	+column-display
+	margin-top: 30px
+	border-radius: 4px
+	align-items: center
+	border: solid 1px #ffff
+	padding: 20px 10px 0px 10px
+	.error-message
+		text-align: center
+.new-priceGrid-container
+	height: 70vh
+	+column-display
+	align-items: center
+	justify-content: center
+	.new-coin-price-heading
+		text-align: center
+		margin: 0px 0px 10px 0px

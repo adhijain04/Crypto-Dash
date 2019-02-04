@@ -1,0 +1,553 @@
+body {
+  background-color: #010e2c;
+  color: #fff;
+  font-family: "Do Hyeon", sans-serif;
+  letter-spacing: 2px;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #fff;
+}
+body::-webkit-scrollbar-track {
+  background-color: #010e2c;
+}
+
+.App {
+  padding: 20px 40px;
+}
+
+.Toastify__toast--success {
+  background: #010e2c !important;
+  box-shadow: 0px 0px 3px 1px #fff !important;
+}
+
+.Toastify__toast {
+  min-height: 40px !important;
+  border-radius: 4px !important;
+}
+
+.Toastify__toast-container--bottom-center {
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: 0px auto !important;
+}
+
+.Toastify__toast-container {
+  width: 415px !important;
+}
+
+.appbar {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.appbar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+.appbar .logo::before {
+  margin-right: 10px;
+  content: url("../images/logo.png");
+}
+.appbar .logo .logo-name {
+  margin: 0px 0px 8px 0px;
+}
+.appbar .appBarOptions {
+  display: flex;
+  align-items: center;
+}
+.appbar .appBarOptions .appBarOption {
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-family: "Do Hyeon", sans-serif;
+  border: solid 1px #fff;
+  background-color: transparent;
+}
+.appbar .appBarOptions .appBarOption:hover {
+  color: #010e2c;
+  background-color: #fff;
+}
+.appbar .appBarOptions .appBarOptionSelected {
+  font-size: 16px;
+  cursor: pointer;
+  color: #010e2c;
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-family: "Do Hyeon", sans-serif;
+  border: solid 1px #fff;
+  background-color: #fff;
+}
+.appbar .appBarOptions .appBarOptionSelected:focus {
+  outline-color: transparent;
+}
+
+.component-container {
+  display: flex;
+  flex-direction: column;
+}
+.component-container .coins-container .filters-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.component-container .coins-container .filters-container .coin-heading {
+  margin: 0;
+}
+.component-container .coins-container .filters-container .search-container {
+  display: flex;
+  align-items: center;
+}
+.component-container .coins-container .filters-container .search-container .search-label {
+  margin-right: 10px;
+}
+.component-container .coins-container .filters-container .search-container .search-input {
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: #fff;
+  color: #061a44;
+  border: solid 1px #fff;
+}
+.component-container .coins-container .filters-container .search-container .search-input:focus {
+  outline-color: transparent;
+}
+.component-container .coins-container .filters-container .search-container .search-button {
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-family: "Do Hyeon", sans-serif;
+  border: solid 1px #fff;
+  background-color: transparent;
+  padding: 5px 10px;
+}
+.component-container .coins-container .filters-container .search-container .search-button:hover {
+  color: #010e2c;
+  background-color: #fff;
+}
+.component-container .coins-container .coin-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.component-container .coins-container .coin-grid .coin-div {
+  width: 212px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #061a44;
+  box-shadow: 0px 0px 5px 1px #121d5b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.component-container .coins-container .coin-grid .coin-div:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px #fff;
+}
+.component-container .coins-container .coin-grid .coin-div .coin-info {
+  display: flex;
+  flex-direction: column;
+}
+.component-container .coins-container .coin-grid .coin-div .coin-info .coin-name, .component-container .coins-container .coin-grid .coin-div .coin-info .coin-symbol {
+  margin: 0px;
+}
+.component-container .coins-container .coin-grid .coin-div .coin-image {
+  height: 35px;
+  border-radius: 50px;
+}
+.component-container .loader-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.component-container .loader-container .loader {
+  width: 70px;
+}
+.component-container .error-container {
+  width: 100%;
+  padding: 15px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #061a44;
+}
+.component-container .error-container .error-image {
+  width: 65px;
+}
+.component-container .error-container .error-message {
+  width: 100%;
+  text-align: center;
+}
+
+.confirmButton {
+  width: auto;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-family: "Do Hyeon", sans-serif;
+  border: solid 1px #fff;
+  background-color: transparent;
+  margin: 20px auto 0px !important;
+  justify-content: center;
+}
+.confirmButton:hover {
+  color: #010e2c;
+  background-color: #fff;
+}
+
+.confirmButton-disabled {
+  cursor: not-allowed;
+}
+
+.disabled-coin-div {
+  background: #06163a !important;
+}
+
+.WelcomeMessage-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0px;
+  max-height: 300px;
+  border-radius: 4px;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 10px 0px 10px 10px;
+  border: solid 1px #fff;
+}
+.WelcomeMessage-container .welcome-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: normal;
+  align-items: center;
+}
+.WelcomeMessage-container .instruction-message-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.WelcomeMessage-container .instruction-message-container .instruction-image {
+  width: 80px;
+  margin: 20px 0px;
+}
+.WelcomeMessage-container .instruction-message-container .instruction-message {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 10;
+}
+.WelcomeMessage-container .favorite-coins-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+.WelcomeMessage-container .favorite-coins-container .favorite-coins-heading {
+  margin: 0px 0px 10px 0px;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 270px;
+  overflow-y: scroll;
+  padding: 5px 0px 0px 1px;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid::-webkit-scrollbar {
+  width: 5px;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #fff;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid::-webkit-scrollbar-track {
+  background-color: #010e2c;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid .coin-div {
+  width: 212px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #061a44;
+  box-shadow: 0px 0px 5px 1px #121d5b;
+  display: flex;
+  align-items: center;
+  width: 207px;
+  margin-right: 10px;
+  position: relative;
+  justify-content: space-between;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid .coin-div:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px #fff;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid .coin-div .coin-info {
+  display: flex;
+  flex-direction: column;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid .coin-div .coin-info .coin-name, .WelcomeMessage-container .favorite-coins-container .coin-grid .coin-div .coin-info .coin-symbol {
+  margin: 0px;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid .coin-div .coin-image {
+  height: 35px;
+  border-radius: 50px;
+}
+.WelcomeMessage-container .favorite-coins-container .coin-grid .coin-div #removeFavCoin {
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 10px !important;
+}
+
+.priceGrid-container {
+  margin-top: 30px;
+  border-radius: 4px;
+  border: solid 1px #ffff;
+  padding: 10px 10px 0px 10px;
+}
+.priceGrid-container .coin-price-heading {
+  margin: 0px 0px 10px 0px;
+}
+.priceGrid-container > .coin-price-grid-container {
+  overflow-x: scroll;
+}
+.priceGrid-container > .coin-price-grid-container::-webkit-scrollbar {
+  height: 5px;
+}
+.priceGrid-container > .coin-price-grid-container::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #fff;
+}
+.priceGrid-container > .coin-price-grid-container::-webkit-scrollbar-track {
+  background-color: #010e2c;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid {
+  height: 85px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  min-width: min-content;
+  padding: 10px 0px 0px 5px;
+  justify-content: flex-start;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div {
+  width: 212px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #061a44;
+  box-shadow: 0px 0px 5px 1px #121d5b;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  padding: 10px 10px 0px 10px;
+  justify-content: space-between;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px #fff;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div.currentFavoriteCoin {
+  box-shadow: 0px 0px 5px 1px #fff !important;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div .coin-price-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div .coin-price-info .coin-price-details {
+  display: flex;
+  align-items: center;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div .coin-price-info .coin-price-details .coin-price-image {
+  height: 25px;
+  border-radius: 50px;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div .coin-price-info .coin-price-details .coin-price-symbol {
+  margin: 0px 0px 0px 10px;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div .coin-price-info .coin-price-change-rate-positive {
+  margin: 0px;
+  color: green;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div .coin-price-info .coin-price-change-rate-negative {
+  margin: 0px;
+  color: red;
+}
+.priceGrid-container > .coin-price-grid-container .coin-price-grid .coin-price-div .coin-price {
+  margin: 0px;
+  font-size: 30px;
+}
+.priceGrid-container .loader-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.priceGrid-container .loader-container .loader {
+  width: 70px;
+}
+
+.priceGrid-container-error {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  border-radius: 4px;
+  align-items: center;
+  border: solid 1px #ffff;
+  padding: 20px 10px 0px 10px;
+}
+.priceGrid-container-error .error-message {
+  text-align: center;
+}
+
+.new-priceGrid-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.new-priceGrid-container .new-coin-price-heading {
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+}
+
+.CoinSpotLight-container {
+  display: flex;
+  margin-top: 10px;
+}
+.CoinSpotLight-container .coin-details-container {
+  width: 30%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  align-items: center;
+  background: #061a44;
+  justify-content: space-evenly;
+}
+.CoinSpotLight-container .coin-details-container .spottedCoin-name {
+  margin: 0px 0px 10px 0px;
+}
+.CoinSpotLight-container .coin-details-container .current-coin-image {
+  border-radius: 50%;
+}
+.CoinSpotLight-container .coin-details-container > p {
+  text-align: center;
+}
+.CoinSpotLight-container .coin-graph-container {
+  width: 70%;
+  margin-left: 10px;
+}
+.CoinSpotLight-container .coin-graph-container > div {
+  padding: 10px !important;
+  background: #061a44;
+}
+.CoinSpotLight-container .coin-graph-container p {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: #061a44;
+}
+
+.coin-details-container-error {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  background: #061a44;
+}
+.coin-details-container-error .error-message {
+  text-align: center;
+}
+
+.coin-detail-error-container {
+  margin-top: 20px;
+}
+.coin-detail-error-container .coin-error-message {
+  margin: 0px 0px 10px 0px;
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .App {
+    padding: 10px !important;
+  }
+
+  .appbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .appbar .appBarOptions {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  .appbar .appBarOptions > button {
+    margin-left: 0px !important;
+  }
+
+  .filters-container .search-container .search-label {
+    display: none;
+  }
+  .filters-container .search-container .search-input {
+    width: 130px;
+  }
+
+  .coin-grid .coin-div {
+    width: 100% !important;
+  }
+
+  .component-container .confirmButton {
+    margin: 20px 0px 0px 0px !important;
+  }
+
+  .error-container {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .CoinSpotLight-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .CoinSpotLight-container .coin-details-container {
+    width: auto;
+  }
+  .CoinSpotLight-container .coin-graph-container {
+    width: auto;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

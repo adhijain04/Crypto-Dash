@@ -1,0 +1,41 @@
+.CoinSpotLight-container
+	display: flex
+	margin-top: 10px
+	.coin-details-container
+		width : 30%
+		padding: 10px
+		+column-display
+		border-radius: 4px
+		align-items: center
+		background: #061a44
+		justify-content: space-evenly
+		.spottedCoin-name
+			margin: 0px 0px 10px 0px
+		.current-coin-image
+			border-radius: 50%
+		>p
+			text-align: center
+	.coin-graph-container
+		width: 70%
+		margin-left: 10px
+		>div
+			padding: 10px !important
+			background: #061a44
+		p
+			width: 100%
+			padding: 20px 0
+			text-align: center
+			background: #061a44
+
+.coin-details-container-error
+	width: 100%
+	padding: 10px
+	border-radius: 4px
+	background: #061a44
+	.error-message
+		text-align: center
+.coin-detail-error-container
+	margin-top: 20px
+	.coin-error-message
+		margin: 0px 0px 10px 0px
+		text-align: center

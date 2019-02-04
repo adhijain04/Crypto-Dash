@@ -1,0 +1,18 @@
+.appbar
+	height: auto
+	+row-display
+	justify-content: space-between
+	.logo
+		+row-display
+		font-size: 30px
+		&::before
+			margin-right: 10px
+			content: url('../images/logo.png')
+		.logo-name
+			margin: 0px 0px 8px 0px
+	.appBarOptions
+		+row-display
+		.appBarOption
+			+ghost-button
+		.appBarOptionSelected
+			+button

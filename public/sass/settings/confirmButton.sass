@@ -1,0 +1,58 @@
+.component-container
+	+column-display
+	.coins-container
+		.filters-container
+			+row-display
+			margin-bottom: 20px
+			justify-content: space-between
+			.coin-heading
+				margin: 0
+			.search-container
+				+row-display
+				.search-label
+					margin-right: 10px
+				.search-input
+					+search-input
+				.search-button
+					+ghost-button
+					padding: 5px 10px
+		.coin-grid
+			+coin-container
+			justify-content: space-between
+			.coin-div
+				+coin-div
+				+row-display
+				justify-content: space-between
+				.coin-info
+					+column-display
+					.coin-name,.coin-symbol
+						margin: 0px
+				.coin-image
+					height: 35px
+					border-radius: 50px
+	.loader-container
+		+loader-container
+		.loader
+			+loader
+	.error-container
+		width: 100%
+		padding: 15px 10px 0px 10px
+		+column-display
+		align-items: center
+		background: #061a44
+		.error-image
+			width: 65px
+		.error-message
+			width: 100%
+			text-align: center
+
+.confirmButton
+	width: auto
+	+row-display
+	+ghost-button
+	margin: 20px auto 0px !important
+	justify-content: center
+.confirmButton-disabled
+	cursor: not-allowed
+.disabled-coin-div
+	background: #06163a !important
