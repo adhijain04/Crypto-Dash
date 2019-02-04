@@ -22,7 +22,7 @@ class ConfirmButton extends Component {
 		// })
 		return (
 			<div className='component-container'>
-				<ToastContainer position="bottom-center" autoClose={2000} hideProgressBar={true} closeOnClick={false} newestOnTop={false} pauseOnHover={true} draggable={true} />
+				<ToastContainer position="bottom-center" autoClose={2500} hideProgressBar={true} closeOnClick={false} newestOnTop={false} pauseOnHover={true} draggable={true} />
 				<div className='coins-container'>
 					<div className='filters-container'>
 						<h3 className='coin-heading'>Coin List ({coinList.length})</h3>

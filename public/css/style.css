@@ -533,6 +533,11 @@ body::-webkit-scrollbar-track {
   .error-container {
     margin-top: 10px;
   }
+
+  .Toastify__toast-container {
+    width: 90vw !important;
+    bottom: 20px !important;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .CoinSpotLight-container {

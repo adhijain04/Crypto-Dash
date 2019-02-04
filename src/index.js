@@ -4,15 +4,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { createStore, applyMiddleware, compose  } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import Reducer from './store/reducers'
-import {createLogger} from 'redux-logger';
+import { createLogger } from 'redux-logger';
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleWare from 'redux-thunk';
 
 const logger = createLogger();
-const store = createStore(Reducer, compose(applyMiddleware(thunkMiddleWare, logger), composeWithDevTools()));
+
+const composeEnhancers = composeWithDevTools() || compose;
+
+const store = createStore(Reducer, compose(applyMiddleware(thunkMiddleWare, logger), composeEnhancers));
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
